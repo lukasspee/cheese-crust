@@ -1,1 +1,6 @@
-%p You searched for '#{query}'
+- if results.any?
+  %ul
+  - results.each do |cheese|
+    %li You can#{cheese.edible? ? "" : "not"} eat the crust of #{cheese.name}.
+- else
+  %p No such cheese found.
