@@ -15,7 +15,7 @@ class Cheese
 end
 
 DataMapper.finalize
-DataMapper.auto_migrate!
+DataMapper.auto_upgrade!
 
 CSV.foreach(File.join(__dir__, "data.csv")) do |line|
   name   = line[0]
